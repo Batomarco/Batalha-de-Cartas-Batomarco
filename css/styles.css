@@ -1,0 +1,211 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  min-height: 854px;
+  background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-07-super-trunfo-bg.png');
+  background-color: #000000;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-bottom: 20vh;
+  color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  margin: 5px 0;
+}
+
+button, 
+.button-jogar {
+  padding: .8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #0066cc;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+button:hover,
+.button-jogar:hover {
+  background-color: #005a23;
+}
+
+/* Estilos para o botão desativado */
+#btnJogar[disabled],
+#btnSortear[disabled] {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+/* Remover o hover quando o botão estiver desativado */
+#btnJogar.no-hover:hover,
+#btnSortear.no-hover:hover {
+  background-color: grey;
+}
+
+#instrucoes-link,
+#versoes-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  margin-top: 1rem;
+  background-color: #cc0000;
+  cursor: pointer;
+}
+
+#carta-jogador, #carta-maquina {
+  width: 360px;
+  height: 500px;
+  overflow: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background-size: 300px 250px;
+  background-repeat: no-repeat;
+  background-position-x: 30px;
+  background-position-y: 40px;
+  border-radius: 33px;
+  vertical-align: top;
+}
+
+#carta-jogador h3 {
+  text-align: center;
+}
+
+.carta-imagem {
+  border: 1px solid black;
+  height: 100px;
+  margin: 10px;
+}
+
+.carta-imagem img {
+  width: 100%;
+  height: 100%;
+}
+
+.carta-status {
+  height: 160px;
+  margin: 2rem;
+  color: white;
+  z-index: 2;
+}
+
+.carta-status input {
+  margin: 20px 10px;
+}
+
+.resultado-final {
+  margin: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.--spacing {
+  margin-left: 2.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carta-subtitle {
+  color: black;
+  z-index: 2;
+  position: absolute;
+  top: 16px;
+  left: 37px;
+  font-weight: 800;
+  font-size: 1.0rem;
+  text-transform: uppercase;
+}
+
+#cartas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carta-status p {
+  margin-bottom: 2rem;
+}
+
+#quantidade-cartas {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Estilos para as instruções e histórico de versões */
+#instrucoes,
+#versoes {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#instrucoes h3,
+#versoes h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+#instrucoes p,
+#versoes p {
+  font-size: 1.2rem;
+}
+
+#modoJogoContainer {
+  margin-top: 1rem;
+}
+
+.modo-jogo-container {
+  margin-bottom: 10px;
+}
+
+.iniciar-jogo-btn {
+  margin-top: 10px;
+}
+
+.resultado-container {
+  margin-top: 20px;
+}
+
+#modoJogo {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}

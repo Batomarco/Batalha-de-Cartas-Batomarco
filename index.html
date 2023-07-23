@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Batlha de Cartas - Batomarco</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="page-title">Batalha de Cartas</h1>
+            
+            <div class="section" id="conteudo-instrucoes">
+                <p>
+                    <span id="instrucoes-link" style="cursor: pointer; text-decoration: underline;">Instruções:</span>
+                </p>
+            </div>
+
+            <div id="instrucoes" style="display: none;">
+                <h2>Regras:</h2>
+                <p>
+                    Escolha um modo de jogo e em seguida clique em 'Sortear carta'; <br>
+                    As cartas são embaralhadas e distribuídas; <br>
+                    Para jogar, escolha um dos seus atributos; <br>
+                    Ganha aquele que tiver o maior valor; <br>
+                    O vencedor da rodada recebe a carta dos outros jogadores.
+                </p>
+                <h2>Awaken:</h2>
+                <p>
+                    Se você ganhar com a mesma carta por duas rodadas seguidas, ela aparecerá em sua forma Awaken; <br>
+                    Na forma Awaken sua carta recebe atributos melhores, atente-se que se perder a carta Awaken, ela voltará a ser uma carta normal. <br>
+                </p>
+                <h2>Vencedor:</h2>
+                <p>
+                    Vence quem conseguir pegar todas as cartas do oponente. <br>
+                </p>
+                <h2>Modos:</h2>
+                <p>
+                    Modo Rápido: Jogue com 26 cartas no total, sendo 13 para cada jogador; <br>
+                    Modo Normal: Jogue com 52 cartas no total, sendo 26 para cada jogador. <br>
+                </p>
+                <p>
+                    <span id="versoes-link" style="cursor: pointer; text-decoration: underline;">Versões</span>
+                </p>
+                <button class="back-btn" id="voltar-btn">Voltar</button>
+            </div>
+
+            <div class="section" id="versoes" style="display: none;">
+                <h2>Histórico de Versões</h2>
+                <h1>
+                    Versão 1.0 (beta):
+                </h1>
+                <p>
+                    Sistema para separar as cartas entre os dois jogadores; <br>
+                    Sistema de rodadas, uma vez o jogador pode escolher o atributo, outra vez a máquina pode escolher; <br>
+                    Sistema que o vencedor da rodada pega a carta do outro jogador; <br>
+                    Sistema da carta Awaken, que aparece com atributos melhores; <br>
+                    Criação do modo normal com as 56 cartas, e o modo rápido com 26 cartas <br>
+                </p>
+                <h1>
+                    Ideias para versões futuras:
+                </h1>
+                <p>
+                    Remodular o modo Normal, com as Awaken ficando fortes uma rodada sim uma rodada não; <br>
+                    Fazer novas bordas mais bonitas; <br>
+                    Fazer efeito especial para as cartas Awaken; <br>
+                    Sistema para escolher ir contra a máquina, ou contra um jogador; <br>
+                    Criar novo modo sobrevivência, com uma barra de vida. <br>
+                </p>
+                <button class="back-btn" id="voltar-btn-versoes">Voltar</button>
+            </div>
+
+            <div class="section" id="modoJogoContainer">
+                <div class="modo-jogo-container">
+                    <label for="modoJogo">Escolha o modo de jogo:</label>
+                    <select id="modoJogo">
+                        <option value="rapido">Modo Rápido</option>
+                        <option value="normal">Modo Normal</option>
+                    </select>
+                </div>
+                <div class="iniciar-jogo-btn">
+                    <button onclick="iniciarJogo()">Iniciar Jogo</button>
+                </div>
+            </div>
+
+            <button type="button" onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
+
+            <div class="section" id="jogoContainer">
+
+                    <form id="form">
+                        <h2 id="escolhaAtributo">Escolha o seu atributo:</h2>
+                        <div class="wrapper">
+                            <div>
+                                <div id="carta-jogador">
+                                    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png"
+                                        style=" width: inherit; height: inherit; position: absolute;">
+                                    <h3></h3>
+                                </div>
+                            </div>
+                            <div class="resultado-container">
+                                <div id="quantidade-cartas"></div>
+                                <div id="resultado"></div>
+                            </div>
+                            <div>
+                                <div id="carta-maquina" class="carta">
+                                    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png"
+                                    style="width: inherit; height: inherit; position: absolute;">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button-jogar" type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+                    </form>
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <script type="text/javascript" src="js/cartas.js" ></script>
+        <script type="text/javascript" src="js/scripts.js" ></script>
+    </body>
+</html>
