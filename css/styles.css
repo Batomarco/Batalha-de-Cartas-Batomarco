@@ -20,6 +20,14 @@ body {
     zoom: 80%;
     width: device-width;
   }
+
+  .cabeçalho {
+    zoom: 150%;
+  }
+
+  .button-jogar {
+    zoom: 150%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -27,6 +35,14 @@ body {
     max-width: 100%;
     zoom: 40%;
     width: device-width;
+  }
+
+  .cabeçalho {
+    zoom: 150%;
+  }
+
+  .button-jogar {
+    zoom: 150%;
   }
 }
 
