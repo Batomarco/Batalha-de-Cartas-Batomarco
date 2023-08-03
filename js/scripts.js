@@ -99,7 +99,7 @@ function sortearCarta() {
     if (maoMaquina.length > 0 && maoJogador.length > 0) {
         if (turnoJogador) {
             var divResultado = document.getElementById("resultado");
-            divResultado.innerHTML = "<p class='resultado-final'>Sua Vez...</p>";
+            divResultado.innerHTML = "<p class='resultado-final'>Sua Vez!</p>";
         }
 
         // Mostrar o <h2> com ID "escolhaAtributo" quando o jogo começar
@@ -275,7 +275,7 @@ function jogadaComputador() {
     document.getElementById('btnJogar').disabled = true;
     
     var divResultado = document.getElementById("resultado");
-    divResultado.innerHTML = "<p class='resultado-final'>Vez do Computador...</p>";
+    divResultado.innerHTML = "<p class='resultado-final'>Vez do Computador!</p>";
 
     exibirCartaJogador();
 
@@ -430,8 +430,6 @@ function verificarCartasVencidas(carta, cartasVencidas) {
     
     const nomeCarta = carta.nome;
     const cartaVencida = cartasVencidas.find((cartaVencida) => cartaVencida.nome === nomeCarta);
-
-    console.log(cartasVencidasJogador);
 
     if (cartaVencida) {
         cartaVencida.contador++;
